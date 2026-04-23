@@ -37,8 +37,19 @@
                         <div class="space-y-3 text-sm text-indigo-200">
                             <div class="flex flex-col items-end gap-3">
                                 <p class="text-sm text-indigo-100">Logged in as <span id="usernameDisplay" class="font-semibold"></span></p>
-                                <button onclick="handleLogout()" class="rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition">Logout</button>
-                            </div>
+                                <button onclick="handleLogout()" 
+class="group relative inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-bold text-white 
+bg-gradient-to-r from-red-500 to-pink-500 shadow-md transition-all duration-300 
+hover:scale-105 hover:shadow-red-500/40 active:scale-95">
+
+    <span>Logout</span>
+
+    <!-- icon -->
+    <span class="transition-transform duration-300 group-hover:translate-x-1">🚪</span>
+
+    <!-- subtle shine -->
+    <span class="absolute inset-0 rounded-full bg-white/10 opacity-0 group-hover:opacity-100 transition"></span>
+</button>                  </div>
                             <p class="inline-flex items-center gap-2"><span>📱</span> +91 8667880266</p>
                             <p class="inline-flex items-center gap-2"><span>✉️</span> mnaqhid@gmail.com</p>
                             <p class="inline-flex items-center gap-2"><span>🔗</span> www.linkedin.com/in/naqhid</p>
