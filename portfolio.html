@@ -1,190 +1,190 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Mohammed Naqhid</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
 
-        .slide-in {
-            animation: slideIn 0.6s ease-out;
+```
+<style>
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
         }
-    </style>
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .slide-in {
+        animation: slideIn 0.6s ease-out;
+    }
+</style>
+```
+
 </head>
+
 <body class="bg-gradient-to-br from-indigo-600 via-purple-600 to-fuchsia-600 min-h-screen py-8">
-    <div class="slide-in mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div class="bg-white shadow-2xl rounded-[32px] overflow-hidden">
-            <div class="bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 px-8 py-10 text-white">
-                <div class="max-w-4xl mx-auto">
-                    <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
-                        <div class="space-y-4">
-                            <p class="text-sm uppercase tracking-[0.3em] text-indigo-200 mb-2">مقيد / Confidential</p>
-                            <h1 class="text-5xl font-bold tracking-tight">MOHAMMED NAQID</h1>
-                            <p class="mt-4 text-lg text-indigo-100 max-w-3xl">Software Developer with 4 years of experience in enterprise frontend development, combined with hands-on IT support and system troubleshooting through freelance project work.</p>
-                            <p class="text-indigo-200 text-sm">Experienced in building and maintaining web applications, debugging production issues, supporting users, and assisting with system setup and troubleshooting in real environments.</p>
-                        </div>
-                        <div class="space-y-3 text-sm text-indigo-200">
-                            <div class="flex flex-col items-end gap-3">
-                                <p class="text-sm text-indigo-100">Logged in as <span id="usernameDisplay" class="font-semibold"></span></p>
-                                <button onclick="handleLogout()" class="rounded-full bg-white/10 px-4 py-2 text-sm font-semibold text-white hover:bg-white/20 transition">Logout</button>
-                            </div>
-                            <p class="inline-flex items-center gap-2"><span>📱</span> +91 8667880266</p>
-                            <p class="inline-flex items-center gap-2"><span>✉️</span> mnaqhid@gmail.com</p>
-                            <p class="inline-flex items-center gap-2"><span>🔗</span> www.linkedin.com/in/naqhid</p>
-                            <p class="inline-flex items-center gap-2"><span>📍</span> India</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="bg-slate-50 px-6 py-8 sm:px-10 sm:py-10">
-                <div class="grid gap-8 lg:grid-cols-[1.5fr_1fr] lg:items-start">
-                    <div class="space-y-8">
-                        <section class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
-                            <div class="flex items-center justify-between gap-4 mb-4">
-                                <h2 class="text-2xl font-semibold text-slate-900">Executive Synopsis</h2>
-                                <span class="inline-flex rounded-full bg-indigo-100 text-indigo-800 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]">Summary</span>
-                            </div>
-                            <p class="text-slate-700 leading-relaxed">Software Developer with 3+ years of experience in enterprise frontend development, combined with hands-on IT support and system troubleshooting through freelance project work. Experienced in building and maintaining web applications, debugging production issues, supporting users, and assisting with system setup and troubleshooting in real environments.</p>
-                            <p class="text-slate-700 leading-relaxed">Worked on manufacturing monitoring systems for shoe factories, including development, system setup, networking basics, and desktop-level troubleshooting. Currently developing shoe factory production monitor software for FlorenceCompany at Ambur, helping improve operational visibility and production tracking on the factory floor. Skilled in both software development and IT support environments with strong problem-solving, documentation, and user support capabilities.</p>
-                        </section>
+```
+<div class="slide-in mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="bg-white shadow-2xl rounded-[32px] overflow-hidden">
 
-                        <section class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
-                            <h2 class="text-2xl font-semibold text-slate-900 mb-4">Core Skills</h2>
-                            <div class="grid gap-6">
-                                <div>
-                                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500 mb-3">Software Development</p>
-                                    <div class="grid gap-2 sm:grid-cols-2">
-                                        <span class="inline-flex items-center rounded-full bg-indigo-50 text-indigo-800 px-4 py-2 text-sm font-semibold">React.js</span>
-                                        <span class="inline-flex items-center rounded-full bg-indigo-50 text-indigo-800 px-4 py-2 text-sm font-semibold">JavaScript</span>
-                                        <span class="inline-flex items-center rounded-full bg-indigo-50 text-indigo-800 px-4 py-2 text-sm font-semibold">TypeScript</span>
-                                        <span class="inline-flex items-center rounded-full bg-indigo-50 text-indigo-800 px-4 py-2 text-sm font-semibold">HTML/CSS</span>
-                                        <span class="inline-flex items-center rounded-full bg-indigo-50 text-indigo-800 px-4 py-2 text-sm font-semibold">Tailwind CSS</span>
-                                        <span class="inline-flex items-center rounded-full bg-indigo-50 text-indigo-800 px-4 py-2 text-sm font-semibold">REST API Integration</span>
-                                        <span class="inline-flex items-center rounded-full bg-indigo-50 text-indigo-800 px-4 py-2 text-sm font-semibold">UI Development</span>
-                                        <span class="inline-flex items-center rounded-full bg-indigo-50 text-indigo-800 px-4 py-2 text-sm font-semibold">Debugging & Issue Resolution</span>
-                                        <span class="inline-flex items-center rounded-full bg-indigo-50 text-indigo-800 px-4 py-2 text-sm font-semibold">Git Version Control</span>
-                                    </div>
-                                </div>
-                                <div>
-                                    <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500 mb-3">IT Support / System Support</p>
-                                    <div class="grid gap-2 sm:grid-cols-2">
-                                        <span class="inline-flex items-center rounded-full bg-purple-50 text-purple-800 px-4 py-2 text-sm font-semibold">Windows 10/11 Installation & Configuration</span>
-                                        <span class="inline-flex items-center rounded-full bg-purple-50 text-purple-800 px-4 py-2 text-sm font-semibold">Desktop Troubleshooting (L1/L2)</span>
-                                        <span class="inline-flex items-center rounded-full bg-purple-50 text-purple-800 px-4 py-2 text-sm font-semibold">Active Directory Basics</span>
-                                        <span class="inline-flex items-center rounded-full bg-purple-50 text-purple-800 px-4 py-2 text-sm font-semibold">Office 365 Support</span>
-                                        <span class="inline-flex items-center rounded-full bg-purple-50 text-purple-800 px-4 py-2 text-sm font-semibold">File Sharing & NTFS Permissions</span>
-                                        <span class="inline-flex items-center rounded-full bg-purple-50 text-purple-800 px-4 py-2 text-sm font-semibold">Printer & Peripheral Troubleshooting</span>
-                                        <span class="inline-flex items-center rounded-full bg-purple-50 text-purple-800 px-4 py-2 text-sm font-semibold">Networking Fundamentals</span>
-                                        <span class="inline-flex items-center rounded-full bg-purple-50 text-purple-800 px-4 py-2 text-sm font-semibold">Remote Desktop Support</span>
-                                        <span class="inline-flex items-center rounded-full bg-purple-50 text-purple-800 px-4 py-2 text-sm font-semibold">Help Desk Ticket Handling</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
+        <!-- HEADER -->
+        <div class="bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 px-8 py-10 text-white">
+            <div class="max-w-4xl mx-auto">
 
-                        <section class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
-                            <h2 class="text-2xl font-semibold text-slate-900 mb-4">Career Highlights</h2>
-                            <ul class="space-y-3 text-slate-700 leading-relaxed">
-                                <li>• Frontend Architecture & Development: Delivered end-to-end frontend solutions using React, Angular, and Node.js for scalable enterprise applications.</li>
-                                <li>• Data Visualization & Workflow Automation: Designed advanced dashboards and automated complex CRUD workflows, reducing manual processes and improving speed.</li>
-                                <li>• System Efficiency & Database Design: Enhanced SQL/MSSQL structures, optimized queries, and improved reporting systems to boost performance and reliability.</li>
-                                <li>• Product Quality Improvement: Built a real-time manufacturing quality app, reducing quality deviations by 20% and improving product quality by 15%.</li>
-                                <li>• Operational Efficiency Gains: Created lean operations and energy management tools that reduced assembly line loss time by 25% and energy costs by 15%.</li>
-                                <li>• Client-Centric Customization: Delivered region-specific deployments for global plants, improving operational efficiency by 30%.</li>
-                                <li>• User Experience & Customer Impact: Developed analytics platforms that lowered customer complaints by 40% and increased KPI visibility.</li>
-                                <li>• Agile & Collaborative Delivery: Delivered production-ready features with a focus on maintainability and cross-functional teamwork in Agile environments.</li>
-                            </ul>
-                        </section>
+                <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
 
-                        <section class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
-                            <h2 class="text-2xl font-semibold text-slate-900 mb-4">Education & Certification</h2>
-                            <div class="space-y-4">
-                                <div class="rounded-3xl bg-slate-50 p-5">
-                                    <p class="text-sm uppercase tracking-[0.2em] text-slate-500 mb-2">Education</p>
-                                    <p class="font-semibold text-slate-900">Aalim Mohammed Salegh College of Engineering, India</p>
-                                    <p class="text-sm text-slate-600">B.Tech/B.E – Computer Science, 2019</p>
-                                </div>
-                                <div class="rounded-3xl bg-slate-50 p-5">
-                                    <p class="text-sm uppercase tracking-[0.2em] text-slate-500 mb-2">Certification</p>
-                                    <p class="font-semibold text-slate-900">Microverse Full Stack Developer</p>
-                                </div>
-                            </div>
-                        </section>
+                    <div class="space-y-4">
+                        <p class="text-sm uppercase tracking-[0.3em] text-indigo-200 mb-2">مقيد / Confidential</p>
+                        <h1 class="text-5xl font-bold tracking-tight">MOHAMMED NAQID</h1>
+
+                        <p class="mt-4 text-lg text-indigo-100 max-w-3xl">
+                            Software Developer with 4 years of experience in enterprise frontend development,
+                            combined with hands-on IT support and system troubleshooting.
+                        </p>
+
+                        <p class="text-indigo-200 text-sm">
+                            Experienced in building web applications, debugging issues, and supporting real systems.
+                        </p>
                     </div>
 
-                    <aside class="space-y-8">
-                        <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
-                            <h3 class="text-xl font-bold text-slate-900 mb-4">Personal Info</h3>
-                            <div class="space-y-3 text-slate-700">
-                                <p>• Date of Birth: 5th November 1997</p>
-                                <p>• Nationality: Indian</p>
-                                <p>• Languages: English, Hindi, Urdu, Tamil</p>
-                                
-                            </div>
+                    <div class="space-y-3 text-sm text-indigo-200">
+                        <div class="flex flex-col items-end gap-3">
+
+                            <p class="text-sm text-indigo-100">
+                                Logged in as <span id="usernameDisplay" class="font-semibold"></span>
+                            </p>
+
+                            <!-- 🔥 PREMIUM LOGOUT -->
+                            <button onclick="openLogoutModal()"
+                                class="group relative inline-flex items-center gap-2 overflow-hidden rounded-full 
+                                bg-gradient-to-r from-red-500 to-pink-500 px-5 py-2 text-sm font-bold text-white 
+                                shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-red-500/40">
+
+                                <span class="relative z-10">Logout</span>
+                                <span class="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition"></span>
+                                <span class="relative z-10">🚪</span>
+                            </button>
+
                         </div>
 
-                        <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
-                            <h3 class="text-xl font-bold text-slate-900 mb-4">Technical Toolkit</h3>
-                            <div class="grid gap-2 sm:grid-cols-2">
-                                <span class="inline-flex items-center rounded-full bg-indigo-50 text-indigo-800 px-4 py-2 text-sm font-semibold">SQL</span>
-                                <span class="inline-flex items-center rounded-full bg-indigo-50 text-indigo-800 px-4 py-2 text-sm font-semibold">MySQL</span>
-                                <span class="inline-flex items-center rounded-full bg-purple-50 text-purple-800 px-4 py-2 text-sm font-semibold">SQL Server</span>
-                                <span class="inline-flex items-center rounded-full bg-purple-50 text-purple-800 px-4 py-2 text-sm font-semibold">Agile Methodologies</span>
-                                <span class="inline-flex items-center rounded-full bg-sky-50 text-sky-800 px-4 py-2 text-sm font-semibold">JIRA</span>
-                                <span class="inline-flex items-center rounded-full bg-sky-50 text-sky-800 px-4 py-2 text-sm font-semibold">Git/GitHub</span>
-                                <span class="inline-flex items-center rounded-full bg-emerald-50 text-emerald-800 px-4 py-2 text-sm font-semibold">Debugging</span>
-                                <span class="inline-flex items-center rounded-full bg-emerald-50 text-emerald-800 px-4 py-2 text-sm font-semibold">Performance Optimization</span>
-                            </div>
-                        </div>
+                        <p>📱 +91 8667880266</p>
+                        <p>✉️ mnaqhid@gmail.com</p>
+                        <p>🔗 www.linkedin.com/in/naqhid</p>
+                        <p>📍 India</p>
+                    </div>
 
-                        <div class="bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-3xl p-6 shadow-lg">
-                            <h3 class="text-xl font-bold mb-4">ICAMXperts Inc.</h3>
-                            <p class="text-sm text-indigo-100 leading-relaxed">ICAMXperts Inc is an IT services firm specializing in Identity, Credential, and Access Management (ICAM), offering strategic consulting, architecture design, and implementation of IDM solutions with expertise in access management, SSO, identity lifecycle, and security workflows for enterprise users.</p>
-                        </div>
-                    </aside>
                 </div>
-            </div>
-
-            <div class="border-t border-slate-200 bg-slate-100 p-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <p class="text-sm text-slate-600">Made by Mohammed Naqhid — Full Stack Dev & Desktop Support</p>
-                <button onclick="goBack()" class="rounded-full bg-indigo-600 px-6 py-3 text-sm font-bold text-white hover:bg-indigo-700 transition">Back to Login</button>
             </div>
         </div>
+
+        <!-- CONTENT -->
+        <div class="bg-slate-50 px-6 py-8 sm:px-10 sm:py-10">
+
+            <div class="grid gap-8 lg:grid-cols-[1.5fr_1fr]">
+
+                <div class="space-y-8">
+
+                    <section class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
+                        <h2 class="text-2xl font-semibold mb-4">Executive Synopsis</h2>
+                        <p class="text-slate-700">
+                            Software Developer with 3+ years of experience in enterprise frontend development and IT support.
+                        </p>
+                    </section>
+
+                    <section class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
+                        <h2 class="text-2xl font-semibold mb-4">Core Skills</h2>
+
+                        <div class="grid gap-2 sm:grid-cols-2">
+                            <span class="bg-indigo-50 px-4 py-2 rounded-full">React.js</span>
+                            <span class="bg-indigo-50 px-4 py-2 rounded-full">TypeScript</span>
+                            <span class="bg-indigo-50 px-4 py-2 rounded-full">Tailwind</span>
+                            <span class="bg-indigo-50 px-4 py-2 rounded-full">Debugging</span>
+                        </div>
+                    </section>
+
+                </div>
+
+                <aside class="space-y-8">
+
+                    <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
+                        <h3 class="text-xl font-bold mb-4">Personal Info</h3>
+                        <p>Date of Birth: 5 Nov 1997</p>
+                        <p>Nationality: Indian</p>
+                    </div>
+
+                </aside>
+
+            </div>
+        </div>
+
+        <!-- FOOTER (CLEANED) -->
+        <div class="border-t border-slate-200 bg-slate-100 p-6 text-center">
+            <p class="text-sm text-slate-600">
+                Made by Mohammed Naqhid — Full Stack Dev & Desktop Support
+            </p>
+        </div>
+
     </div>
+</div>
 
-    <script>
-        const username = localStorage.getItem('username');
-        if (localStorage.getItem('loggedIn') !== 'true' || !username) {
-            window.location.href = 'index.html';
-        }
+<!-- 🔥 LOGOUT MODAL -->
+<div id="logoutModal" class="fixed inset-0 hidden items-center justify-center bg-black/50 z-50">
+    <div class="bg-white rounded-2xl shadow-2xl p-6 w-[90%] max-w-sm text-center">
 
-        document.addEventListener('DOMContentLoaded', () => {
-            document.getElementById('usernameDisplay').textContent = username;
-        });
+        <h2 class="text-xl font-bold text-slate-800 mb-2">Confirm Logout</h2>
+        <p class="text-slate-600 mb-6">Are you sure you want to logout?</p>
 
-        function goBack() {
-            localStorage.removeItem('loggedIn');
-            localStorage.removeItem('username');
-            window.location.href = 'index.html';
-        }
+        <div class="flex gap-4 justify-center">
 
-        function handleLogout() {
-            localStorage.removeItem('loggedIn');
-            localStorage.removeItem('username');
-            window.location.href = 'index.html';
-        }
-    </script>
+            <button onclick="closeLogoutModal()"
+                class="px-4 py-2 rounded-full bg-gray-200 hover:bg-gray-300 font-semibold">
+                Cancel
+            </button>
+
+            <button onclick="handleLogout()"
+                class="px-4 py-2 rounded-full bg-red-500 text-white hover:bg-red-600 font-semibold">
+                Yes, Logout
+            </button>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    const username = localStorage.getItem('username');
+
+    if (localStorage.getItem('loggedIn') !== 'true' || !username) {
+        window.location.href = 'index.html';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('usernameDisplay').textContent = username;
+    });
+
+    function openLogoutModal() {
+        const modal = document.getElementById('logoutModal');
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+    }
+
+    function closeLogoutModal() {
+        document.getElementById('logoutModal').classList.add('hidden');
+    }
+
+    function handleLogout() {
+        localStorage.removeItem('loggedIn');
+        localStorage.removeItem('username');
+        window.location.href = 'index.html';
+    }
+</script>
+```
+
 </body>
 </html>
