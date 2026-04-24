@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
     <title>Portfolio - Mohammed Naqhid</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -18,27 +21,40 @@
         }
 
         .slide-in {
-            animation: slideIn 0.6s ease-out;
+            animation: slideIn 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .focus-ring:focus-visible {
+            outline: 3px solid #312e81;
+            outline-offset: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .slide-in {
+                animation: none;
+            }
         }
     </style>
 </head>
-<body class="bg-gradient-to-br from-indigo-600 via-purple-600 to-fuchsia-600 min-h-screen py-8">
-    <div class="slide-in mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+<body class="bg-gradient-to-br from-indigo-600 via-purple-600 to-fuchsia-600 min-h-screen py-4 sm:py-8">
+    <div class="slide-in mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
         <div class="bg-white shadow-2xl rounded-[32px] overflow-hidden">
-            <div class="bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 px-8 py-10 text-white">
+            <div class="bg-gradient-to-r from-indigo-600 via-purple-600 to-fuchsia-600 px-5 sm:px-8 py-7 sm:py-10 text-white">
                 <div class="max-w-4xl mx-auto">
-                    <div class="flex flex-col gap-6 lg:flex-row lg:items-start lg:justify-between">
-                        <div class="space-y-4">
-                            <p class="text-sm uppercase tracking-[0.3em] text-indigo-200 mb-2">مقيد / Confidential</p>
-                            <h1 class="text-5xl font-bold tracking-tight">MOHAMMED NAQHID</h1>
-                            <p class="mt-4 text-lg text-indigo-100 max-w-3xl">Software Developer with 4 years of experience in enterprise frontend development, combined with hands-on IT support and system troubleshooting through freelance project work.</p>
-                            <p class="text-indigo-200 text-sm">Experienced in building and maintaining web applications, debugging production issues, supporting users, and assisting with system setup and troubleshooting in real environments.</p>
+                    <div class="flex flex-col gap-7 lg:flex-row lg:items-start lg:justify-between">
+                        <div class="space-y-3 sm:space-y-4">
+                            <p class="text-sm uppercase tracking-[0.3em] text-indigo-100 mb-2">مقيد / Confidential</p>
+                            <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">MOHAMMED NAQHID</h1>
+                            <p class="mt-3 sm:mt-4 text-base sm:text-lg lg:text-xl text-white/95 max-w-3xl">Software Developer with 4 years of experience in enterprise frontend development, combined with hands-on IT support and system troubleshooting through freelance project work.</p>
+                            <p class="text-indigo-100 text-sm sm:text-base lg:text-lg">Experienced in building and maintaining web applications, debugging production issues, supporting users, and assisting with system setup and troubleshooting in real environments.</p>
                         </div>
-                        <div class="space-y-3 text-sm text-indigo-200">
-                            <div class="flex flex-col items-end gap-3">
-                                <p class="text-sm text-indigo-100">Logged in as <span id="usernameDisplay" class="font-semibold"></span></p>
-                                <button onclick="handleLogout()" 
-class="group relative inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-bold text-white 
+                        <div class="space-y-2.5 text-sm text-indigo-100">
+                            <div class="flex flex-col items-start lg:items-end gap-2.5">
+                                <p class="text-sm text-white">Logged in as <span id="usernameDisplay" class="font-semibold"></span></p>
+                                <p class="text-xs text-indigo-100">Session expires in <span id="sessionCountdown" class="font-semibold text-white">--:--</span></p>
+                                <p class="text-xs text-indigo-100">Signed in at <span id="loginAtDisplay" class="font-semibold text-white">--</span></p>
+                                <button id="logoutButton" type="button"
+class="focus-ring group relative inline-flex items-center gap-2 rounded-full px-5 py-2 text-sm font-bold text-white 
 bg-gradient-to-r from-red-500 to-pink-500 shadow-md transition-all duration-300 
 hover:scale-105 hover:shadow-red-500/40 active:scale-95">
 
@@ -59,20 +75,20 @@ hover:scale-105 hover:shadow-red-500/40 active:scale-95">
                 </div>
             </div>
 
-            <div class="bg-slate-50 px-6 py-8 sm:px-10 sm:py-10">
+            <div class="bg-slate-50 px-4 sm:px-10 py-6 sm:py-10">
                 <div class="grid gap-8 lg:grid-cols-[1.5fr_1fr] lg:items-start">
                     <div class="space-y-8">
-                        <section class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
+                        <section class="bg-white border border-slate-200 rounded-3xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
                             <div class="flex items-center justify-between gap-4 mb-4">
-                                <h2 class="text-2xl font-semibold text-slate-900">Executive Synopsis</h2>
+                                <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-900">Executive Synopsis</h2>
                                 <span class="inline-flex rounded-full bg-indigo-100 text-indigo-800 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em]">Summary</span>
                             </div>
-                            <p class="text-slate-700 leading-relaxed">Software Developer with 3+ years of experience in enterprise frontend development, combined with hands-on IT support and system troubleshooting through freelance project work. Experienced in building and maintaining web applications, debugging production issues, supporting users, and assisting with system setup and troubleshooting in real environments.</p>
-                            <p class="text-slate-700 leading-relaxed">Worked on manufacturing monitoring systems for shoe factories, including development, system setup, networking basics, and desktop-level troubleshooting. Currently developing shoe factory production monitor software for FlorenceCompany at Ambur, helping improve operational visibility and production tracking on the factory floor. Skilled in both software development and IT support environments with strong problem-solving, documentation, and user support capabilities.</p>
+                            <p class="text-slate-800 leading-relaxed">Software Developer with 3+ years of experience in enterprise frontend development, combined with hands-on IT support and system troubleshooting through freelance project work. Experienced in building and maintaining web applications, debugging production issues, supporting users, and assisting with system setup and troubleshooting in real environments.</p>
+                            <p class="text-slate-800 leading-relaxed">Worked on manufacturing monitoring systems for shoe factories, including development, system setup, networking basics, and desktop-level troubleshooting. Currently developing shoe factory production monitor software for FlorenceCompany at Ambur, helping improve operational visibility and production tracking on the factory floor. Skilled in both software development and IT support environments with strong problem-solving, documentation, and user support capabilities.</p>
                         </section>
 
-                        <section class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
-                            <h2 class="text-2xl font-semibold text-slate-900 mb-4">Core Skills</h2>
+                        <section class="bg-white border border-slate-200 rounded-3xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+                            <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-900 mb-4">Core Skills</h2>
                             <div class="grid gap-6">
                                 <div>
                                     <p class="text-sm font-semibold uppercase tracking-[0.2em] text-slate-500 mb-3">Software Development</p>
@@ -105,9 +121,9 @@ hover:scale-105 hover:shadow-red-500/40 active:scale-95">
                             </div>
                         </section>
 
-                        <section class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
-                            <h2 class="text-2xl font-semibold text-slate-900 mb-4">Career Highlights</h2>
-                            <ul class="space-y-3 text-slate-700 leading-relaxed">
+                        <section class="bg-white border border-slate-200 rounded-3xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+                            <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-900 mb-4">Career Highlights</h2>
+                            <ul class="space-y-3 text-slate-800 leading-relaxed">
                                 <li>• Frontend Architecture & Development: Delivered end-to-end frontend solutions using React, Angular, and Node.js for scalable enterprise applications.</li>
                                 <li>• Data Visualization & Workflow Automation: Designed advanced dashboards and automated complex CRUD workflows, reducing manual processes and improving speed.</li>
                                 <li>• System Efficiency & Database Design: Enhanced SQL/MSSQL structures, optimized queries, and improved reporting systems to boost performance and reliability.</li>
@@ -119,8 +135,8 @@ hover:scale-105 hover:shadow-red-500/40 active:scale-95">
                             </ul>
                         </section>
 
-                        <section class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
-                            <h2 class="text-2xl font-semibold text-slate-900 mb-4">Education & Certification</h2>
+                        <section class="bg-white border border-slate-200 rounded-3xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
+                            <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-900 mb-4">Education & Certification</h2>
                             <div class="space-y-4">
                                 <div class="rounded-3xl bg-slate-50 p-5">
                                     <p class="text-sm uppercase tracking-[0.2em] text-slate-500 mb-2">Education</p>
@@ -136,9 +152,9 @@ hover:scale-105 hover:shadow-red-500/40 active:scale-95">
                     </div>
 
                     <aside class="space-y-8">
-                        <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
+                        <div class="bg-white border border-slate-200 rounded-3xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
                             <h3 class="text-xl font-bold text-slate-900 mb-4">Personal Info</h3>
-                            <div class="space-y-3 text-slate-700">
+                            <div class="space-y-3 text-slate-800">
                                 <p>• Date of Birth: 5th November 1997</p>
                                 <p>• Nationality: Indian</p>
                                 <p>• Languages: English, Hindi, Urdu, Tamil</p>
@@ -146,7 +162,7 @@ hover:scale-105 hover:shadow-red-500/40 active:scale-95">
                             </div>
                         </div>
 
-                        <div class="bg-white border border-slate-200 rounded-3xl p-6 shadow-sm">
+                        <div class="bg-white border border-slate-200 rounded-3xl p-5 sm:p-6 shadow-sm hover:shadow-md transition-shadow duration-200">
                             <h3 class="text-xl font-bold text-slate-900 mb-4">Technical Toolkit</h3>
                             <div class="grid gap-2 sm:grid-cols-2">
                                 <span class="inline-flex items-center rounded-full bg-indigo-50 text-indigo-800 px-4 py-2 text-sm font-semibold">SQL</span>
@@ -160,41 +176,136 @@ hover:scale-105 hover:shadow-red-500/40 active:scale-95">
                             </div>
                         </div>
 
-                        <div class="bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-3xl p-6 shadow-lg">
+                        <div class="bg-gradient-to-br from-indigo-600 to-purple-600 text-white rounded-3xl p-5 sm:p-6 shadow-lg">
                             <h3 class="text-xl font-bold mb-4">ICAMXperts Inc.</h3>
-                            <p class="text-sm text-indigo-100 leading-relaxed">ICAMXperts Inc is an IT services firm specializing in Identity, Credential, and Access Management (ICAM), offering strategic consulting, architecture design, and implementation of IDM solutions with expertise in access management, SSO, identity lifecycle, and security workflows for enterprise users.</p>
+                            <p class="text-sm text-white/95 leading-relaxed">ICAMXperts Inc is an IT services firm specializing in Identity, Credential, and Access Management (ICAM), offering strategic consulting, architecture design, and implementation of IDM solutions with expertise in access management, SSO, identity lifecycle, and security workflows for enterprise users.</p>
                         </div>
                     </aside>
                 </div>
             </div>
 
-            <div class="border-t border-slate-200 bg-slate-100 p-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-                <p class="text-sm text-slate-600">Made by Mohammed Naqhid — Full Stack Dev & Desktop Support</p>
-                <button onclick="goBack()" class="rounded-full bg-indigo-600 px-6 py-3 text-sm font-bold text-white hover:bg-indigo-700 transition">Back to Login</button>
+            <div class="border-t border-slate-200 bg-slate-100 p-4 sm:p-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                <p class="text-sm text-slate-700">Made by Mohammed Naqhid — Full Stack Dev & Desktop Support</p>
+                <button id="backToLoginButton" type="button" class="focus-ring rounded-full bg-indigo-700 px-6 py-3 text-sm font-bold text-white hover:bg-indigo-800 transition duration-200 hover:-translate-y-0.5">Back to Login</button>
             </div>
         </div>
     </div>
 
     <script>
-        const username = localStorage.getItem('username');
-        if (localStorage.getItem('loggedIn') !== 'true' || !username) {
-            window.location.href = 'index.html';
+        const AUTH_TOKEN_KEY = 'authToken';
+        const AUTH_USER_KEY = 'authUser';
+        const AUTH_EXPIRY_KEY = 'authExpiry';
+        const AUTH_LOGIN_AT_KEY = 'authLoginAt';
+        const SESSION_DURATION_MS = 30 * 60 * 1000;
+        let countdownTimerId = null;
+
+        function clearAuth() {
+            sessionStorage.removeItem(AUTH_TOKEN_KEY);
+            sessionStorage.removeItem(AUTH_USER_KEY);
+            sessionStorage.removeItem(AUTH_EXPIRY_KEY);
+            sessionStorage.removeItem(AUTH_LOGIN_AT_KEY);
         }
+
+        function redirectToLogin() {
+            window.location.replace('index.html');
+        }
+
+        function validateAuth() {
+            const token = sessionStorage.getItem(AUTH_TOKEN_KEY);
+            const storedUsername = sessionStorage.getItem(AUTH_USER_KEY);
+            const expiry = Number(sessionStorage.getItem(AUTH_EXPIRY_KEY));
+
+            if (!token || !storedUsername || !Number.isFinite(expiry)) {
+                clearAuth();
+                redirectToLogin();
+                return false;
+            }
+
+            if (Date.now() > expiry) {
+                clearAuth();
+                redirectToLogin();
+                return false;
+            }
+
+            sessionStorage.setItem(AUTH_EXPIRY_KEY, String(Date.now() + SESSION_DURATION_MS));
+            return true;
+        }
+
+        function formatTimeRemaining(msRemaining) {
+            const safeMs = Math.max(0, msRemaining);
+            const totalSeconds = Math.floor(safeMs / 1000);
+            const minutes = String(Math.floor(totalSeconds / 60)).padStart(2, '0');
+            const seconds = String(totalSeconds % 60).padStart(2, '0');
+            return `${minutes}:${seconds}`;
+        }
+
+        function formatLoginTime(timestamp) {
+            const date = new Date(Number(timestamp));
+            if (Number.isNaN(date.getTime())) {
+                return '--';
+            }
+            return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        }
+
+        function startSessionCountdown() {
+            const countdownEl = document.getElementById('sessionCountdown');
+            if (!countdownEl) {
+                return;
+            }
+
+            if (countdownTimerId) {
+                clearInterval(countdownTimerId);
+            }
+
+            countdownTimerId = setInterval(() => {
+                const expiry = Number(sessionStorage.getItem(AUTH_EXPIRY_KEY));
+                if (!Number.isFinite(expiry)) {
+                    clearAuth();
+                    redirectToLogin();
+                    return;
+                }
+
+                const remaining = expiry - Date.now();
+                countdownEl.textContent = formatTimeRemaining(remaining);
+
+                if (remaining <= 0) {
+                    clearInterval(countdownTimerId);
+                    clearAuth();
+                    redirectToLogin();
+                }
+            }, 1000);
+        }
+
+        validateAuth();
 
         document.addEventListener('DOMContentLoaded', () => {
+            const username = sessionStorage.getItem(AUTH_USER_KEY) || '';
+            const loginAt = sessionStorage.getItem(AUTH_LOGIN_AT_KEY);
             document.getElementById('usernameDisplay').textContent = username;
+            document.getElementById('loginAtDisplay').textContent = formatLoginTime(loginAt);
+
+            document.getElementById('logoutButton').addEventListener('click', handleLogout);
+            document.getElementById('backToLoginButton').addEventListener('click', handleLogout);
+            startSessionCountdown();
         });
 
-        function goBack() {
-            localStorage.removeItem('loggedIn');
-            localStorage.removeItem('username');
-            window.location.href = 'index.html';
-        }
+        // Revalidate when browser restores page from back-forward cache.
+        window.addEventListener('pageshow', () => {
+            validateAuth();
+        });
+
+        window.addEventListener('visibilitychange', () => {
+            if (document.visibilityState === 'visible') {
+                validateAuth();
+            }
+        });
 
         function handleLogout() {
-            localStorage.removeItem('loggedIn');
-            localStorage.removeItem('username');
-            window.location.href = 'index.html';
+            if (countdownTimerId) {
+                clearInterval(countdownTimerId);
+            }
+            clearAuth();
+            redirectToLogin();
         }
     </script>
 </body>
